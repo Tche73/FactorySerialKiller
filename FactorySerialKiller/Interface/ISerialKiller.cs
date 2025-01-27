@@ -10,9 +10,9 @@ namespace CarteDeCreditFactory.Interface
     {
         string GetName();
         string GetSurname(); 
-        int GetProduction();
-        int GetAnnualActivty();
-        int GetAnnualRate();
+        double GetProduction();
+        double GetAnnualActivty();
+        double GetAnnualRate();
         string GetVictimGenre();
     }
 }

@@ -10,17 +10,17 @@ namespace CarteDeCreditFactory.Models
 {
     public class Jack : ISerialKiller
     {
-        int activity = 3;
-        int production = 5;
-        public int GetAnnualActivty()
+        double activity = 3;
+        double production = 5;
+        public double GetAnnualActivty()
         {
 
             return activity;
         }
 
-        public int GetAnnualRate()
+        public double GetAnnualRate()
         {
-            return production / activity;
+            return Math.Round((production / activity), 2);
         }
 
         public string GetName()
@@ -28,7 +28,7 @@ namespace CarteDeCreditFactory.Models
             return "Aaron Kosminski (supposé)";
         }
 
-        public int GetProduction()
+        public double GetProduction()
         {
             return production;
         }

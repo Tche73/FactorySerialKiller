@@ -1,5 +1,6 @@
 ﻿using CarteDeCreditFactory.Interface;
 using CarteDeCreditFactory.Models;
+using System;
 
 internal class Program
 {
@@ -7,12 +8,28 @@ internal class Program
     {
         string killerType = "";
         Console.WriteLine("Veuillez choisir un nom de sérial killer");
-        Console.WriteLine("Bundy, Jack, Dahmer, Garavito");
+        Console.WriteLine("Bundy, Jack, Dahmer, Garavito,Xinhai ou liste");
         killerType = Console.ReadLine();
+        Console.WriteLine("");
+        List<ISerialKiller> killerList = SerialKillerFactory.CreateKillerList();
+        if (killerType.ToLower() == "liste")
+        {
+            foreach (var killer in killerList)
+            {
+                Console.WriteLine($"Nom : {killer.GetName()}");
+                Console.WriteLine($"Surnom : {killer.GetSurname()}");
+                Console.WriteLine($"Genre des victimes : {killer.GetVictimGenre()}");
+                Console.WriteLine($"Nombre total de victimes : {killer.GetProduction()}");
+                Console.WriteLine($"Nombre d'années d'activité : {killer.GetAnnualActivty()}");
+                Console.WriteLine($"Taux annuel moyen : {killer.GetAnnualRate()} victimes/an");
+                Console.WriteLine("------------------------------------\n");
+            }
+        }        
 
         try
         {
             ISerialKiller killerDetails = SerialKillerFactory.CreateKiller(killerType);
+           
             Console.WriteLine(" ---- Détails du sérial killer ----\n");
             Console.WriteLine($"Nom : {killerDetails.GetName()}");
             Console.WriteLine($"Surnom : {killerDetails.GetSurname()}");

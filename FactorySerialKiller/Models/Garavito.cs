@@ -9,18 +9,17 @@ namespace CarteDeCreditFactory.Models
 {
     public class Garavito : ISerialKiller
     {
-        int activity = 10;
-        int production = 138;
-        public int GetAnnualActivty()
+        double activity = 10;
+        double production = 138;
+        public double GetAnnualActivty()
         {
             
             return activity;
         }
 
-        public int GetAnnualRate()
+        public double GetAnnualRate()
         {
-
-           return production/activity;  
+            return Math.Round((production / activity), 2);
         }
 
         public string GetName()
@@ -28,7 +27,7 @@ namespace CarteDeCreditFactory.Models
             return "Luis Garavito";
         }
 
-        public int GetProduction()
+        public double GetProduction()
         {
             return production;
         }

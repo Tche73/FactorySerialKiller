@@ -9,16 +9,16 @@ namespace CarteDeCreditFactory.Models
 {
     public class Dahmer : ISerialKiller
     {
-        int activity = 13;
-        int production = 17;
-        public int GetAnnualActivty()
+        double activity = 13;
+        double production = 17;
+        public double GetAnnualActivty()
         {
             return activity;
         }
 
-        public int GetAnnualRate()
+        public double GetAnnualRate()
         {
-            return production / activity;
+            return Math.Round((production / activity), 2);
         }
 
         public string GetName()
@@ -26,7 +26,7 @@ namespace CarteDeCreditFactory.Models
             return "Jeffrey Dahmer";
         }
 
-        public int GetProduction()
+        public double GetProduction()
         {
             return production;
         }

@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarteDeCreditFactory.Models
+namespace FactorySerialKiller.Models
 {
-    public class Bundy : ISerialKiller
+    public class Xinhai : ISerialKiller
     {
-        double activity = 8;
-        double production = 30;
+        double activity = 14;
+        double production = 67;
         public double GetAnnualActivty()
         {
+
             return activity;
         }
 
@@ -23,7 +24,7 @@ namespace CarteDeCreditFactory.Models
 
         public string GetName()
         {
-            return "Ted Bundy";
+            return "Yang Xinhai";
         }
 
         public double GetProduction()
@@ -33,12 +34,12 @@ namespace CarteDeCreditFactory.Models
 
         public string GetSurname()
         {
-            return "Le Prince des ténèbres!";
+            return "Le tueur à la hache!";
         }
 
         public string GetVictimGenre()
         {
-            return "jeunes femmes";
+            return "Des petits chinois";
         }
     }
 }
