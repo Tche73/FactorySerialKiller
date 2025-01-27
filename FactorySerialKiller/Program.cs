@@ -1,6 +1,5 @@
 ﻿using CarteDeCreditFactory.Interface;
 using CarteDeCreditFactory.Models;
-using System;
 
 internal class Program
 {
